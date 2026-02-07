@@ -1,0 +1,20 @@
+image : node:22.17.1
+
+stages:
+  - install
+  - build
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependecies:
+  stage: install
+  script:
+    - npm install
+
+build:
+  stage: build
+  script:
+    - npm run build
+
